@@ -1,0 +1,32 @@
+{
+  "name": "node-ts-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "type": "module",
+  "scripts": {
+    "prebuild": "npm run format:write && npm run lint:check",
+    "build": "tsc -p ./tsconfig.json",
+    "prestart": "npm run build",
+    "start": "node ./build/index.js",
+    "dev": "node --watch --loader ts-node/esm ./src/index.ts",
+    "format:check": "prettier --check ./src",
+    "format:write": "prettier --write ./src",
+    "lint:check": "eslint --ext .ts ./src/**",
+    "lint:fix": "eslint --ext .ts ./src/** --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "a.tortevois <alexandre.tortevois@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
