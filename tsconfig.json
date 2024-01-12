@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "outDir": "./build",
+    "strict": true,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "types": [
+    "node",
+    "mocha",
+    "chai"
+  ],
+  "include": [
+    "**/*.js",
+    "**/*.json",
+    "**/*.ts"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
