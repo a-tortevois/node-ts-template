@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "outDir": "./build",
+    "strict": true
+  },
+  "types": [
+    "node"
+  ],
+  "include": [
+    "**/*.js",
+    "**/*.json",
+    "**/*.ts"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "node-ts-template",
+  "version": "1.0.0",
+  "author": "",
+  "description": "",
+  "keywords": [],
+  "type": "module",
+  "engines": {
+    "node": ">= 18.19.0"
+  },
+  "main": "./build/index.js",
+  "scripts": {
+    "clean": "bash ./scripts/clean.sh",
+    "prebuild": "node ./scripts/prebuild.js",
+    "build": "tsc --project ./tsconfig.json",
+    "lint:fix": "eslint --fix",
+    "prestart": "npm run build",
+    "start": "node --experimental-specifier-resolution=node ./build/index.js",
+    "start:dev": "node --watch --import=tsx ./src/index.ts",
+    "test": "glob --cmd \"node --import=tsx --test\" \"./tests/**/*.spec.ts\"",
+    "test:watch": "glob --cmd \"node --import=tsx --watch --test\" \"./tests/**/*.spec.ts\"",
+    "test:coverage": "glob --cmd \"node --import=tsx --experimental-test-coverage --test\" \"./tests/**/*.spec.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-import-resolver-typescript": "latest",
+    "eslint-plugin-import": "latest",
+    "glob": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "license": "MIT"
+}
