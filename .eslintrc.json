@@ -1,8 +1,7 @@
 {
   "root": true,
   "env": {
-    "node": true,
-    "mocha": true
+    "node": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -11,8 +10,7 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "import",
-    "mocha"
+    "import"
   ],
   "settings": {
     "import/parsers": {
@@ -31,8 +29,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-    "plugin:mocha/recommended"
+    "plugin:import/typescript"
   ],
   "rules": {
     "@typescript-eslint/member-delimiter-style": [

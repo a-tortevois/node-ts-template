@@ -4,15 +4,10 @@
     "target": "ES6",
     "moduleResolution": "Node",
     "outDir": "./build",
-    "strict": true,
-    "noImplicitAny": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "strict": true
   },
   "types": [
-    "node",
-    "mocha",
-    "chai"
+    "node"
   ],
   "include": [
     "**/*.js",

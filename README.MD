@@ -27,3 +27,9 @@ https://github.com/TypeStrong/ts-node/issues/2053
 ```
 "mochaExplorer.monkeyPatch": false
 ```
+
+
+Add to PATH
+C:\Users\t0280919\AppData\Local\Programs\Git\
+C:\Users\t0280919\AppData\Local\Programs\Git\bin
+C:\Users\t0280919\AppData\Local\Programs\Git\cmd

@@ -1,40 +1,37 @@
 {
   "name": "node-ts-template",
   "version": "1.0.0",
+  "author": "",
   "description": "",
   "keywords": [],
-  "license": "ISC",
-  "author": "",
   "type": "module",
-  "main": "./build/index.js",
   "engines": {
-    "node": "18.18.2"
+    "node": ">= 18.19.0"
   },
+  "main": "./build/index.js",
   "scripts": {
-    "prebuild": "rm -rf ./build && npm run lint:fix",
-    "build": "rm -rf ./build && tsc -p ./tsconfig.json",
+    "clean": "bash ./scripts/clean.sh",
+    "prebuild": "node ./scripts/prebuild.js",
+    "build": "tsc --project ./tsconfig.json",
     "lint:fix": "eslint --fix",
     "prestart": "npm run build",
     "start": "node --experimental-specifier-resolution=node ./build/index.js",
-    "start:dev": "node --watch --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
-    "test": "mocha",
-    "test:watch": "mocha --watch --parallel",
-    "test:coverage": "rm -rf ./coverage && c8 mocha"
+    "start:dev": "node --watch --import=tsx ./src/index.ts",
+    "test": "glob --cmd \"node --import=tsx --test\" \"./tests/**/*.spec.ts\"",
+    "test:watch": "glob --cmd \"node --import=tsx --watch --test\" \"./tests/**/*.spec.ts\"",
+    "test:coverage": ""
   },
   "devDependencies": {
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "c8": "^9.0.0",
-    "chai": "^5.0.0",
-    "eslint": "^8.56.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-mocha": "^10.2.0",
-    "mocha": "^10.2.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
-  }
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "c8": "latest",
+    "eslint": "latest",
+    "eslint-import-resolver-typescript": "latest",
+    "eslint-plugin-import": "latest",
+    "glob": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  },
+  "license": "MIT"
 }
