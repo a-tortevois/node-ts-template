@@ -20,9 +20,11 @@
     "test": "glob --cmd \"node --import=tsx --test\" \"./tests/**/*.spec.ts\"",
     "test:watch": "glob --cmd \"node --import=tsx --watch --test\" \"./tests/**/*.spec.ts\"",
     "test:coverage": "glob --cmd \"node --import=tsx --experimental-test-coverage --test\" \"./tests/**/*.spec.ts\"",
-    "test:coverage:c8": "c8 npm run test"
+    "test:coverage:c8": "c8 npm run test",
+    "test:coverage:nyc": "nyc npm run test"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "latest",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
@@ -31,6 +33,7 @@
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
     "glob": "latest",
+    "nyc": "latest",
     "tsx": "latest",
     "typescript": "latest"
   },
