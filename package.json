@@ -19,12 +19,14 @@
     "start:dev": "node --watch --import=tsx ./src/index.ts",
     "test": "glob --cmd \"node --import=tsx --test\" \"./tests/**/*.spec.ts\"",
     "test:watch": "glob --cmd \"node --import=tsx --watch --test\" \"./tests/**/*.spec.ts\"",
-    "test:coverage": "glob --cmd \"node --import=tsx --experimental-test-coverage --test\" \"./tests/**/*.spec.ts\""
+    "test:coverage": "glob --cmd \"node --import=tsx --experimental-test-coverage --test\" \"./tests/**/*.spec.ts\"",
+    "test:coverage:c8": "c8 npm run test"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "c8": "latest",
     "eslint": "latest",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
