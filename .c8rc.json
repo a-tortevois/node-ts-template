@@ -1,15 +1,13 @@
 {
   "reporter": [
+    "html",
+    "lcov",
     "text",
-    "text-summary",
-    "html"
+    "text-summary"
   ],
   "check-coverage": true,
   "branches": 80,
   "lines": 80,
   "functions": 80,
-  "statements": 80,
-  "include": [
-    "src/**/*.ts"
-  ]
+  "statements": 80
 }

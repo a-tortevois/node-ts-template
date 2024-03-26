@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build",
     "module": "ESNext",
-    "target": "ES6",
     "moduleResolution": "Node",
-    "outDir": "./build",
-    "strict": true
+    "target": "ESNext",
+    "declaration": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "sourceMap": true
   },
   "types": [
     "node"
   ],
   "include": [
-    "**/*.js",
-    "**/*.json",
-    "**/*.ts"
+    "src"
   ],
   "exclude": [
     "build",
