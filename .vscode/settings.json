@@ -47,10 +47,5 @@
     "**/.git": true
   },
   "files.insertFinalNewline": true,
-  "mochaExplorer.nodeArgv": [
-    "--loader=ts-node/esm",
-    "--no-warnings=ExperimentalWarning",
-    "--experimental-specifier-resolution=node"
-  ],
   "workbench.colorTheme": "Default Dark+"
 }

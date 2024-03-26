@@ -30,6 +30,6 @@ https://github.com/TypeStrong/ts-node/issues/2053
 
 
 Add to PATH
-C:\Users\t0280919\AppData\Local\Programs\Git\
-C:\Users\t0280919\AppData\Local\Programs\Git\bin
-C:\Users\t0280919\AppData\Local\Programs\Git\cmd
+<path>\Programs\Git\
+<path>\Programs\Git\bin
+<path>\Programs\Git\cmd
